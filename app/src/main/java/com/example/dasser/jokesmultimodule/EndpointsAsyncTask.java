@@ -17,7 +17,7 @@ import java.io.IOException;
 
 public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
 
-    static final String BUNDLE_JOKE = "joke";
+    private static final String BUNDLE_JOKE = "joke";
     private static MyApi myApiService = null;
     @SuppressLint("StaticFieldLeak") private Activity activity;
     private Runnable runnable;
