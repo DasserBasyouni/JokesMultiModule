@@ -1,6 +1,7 @@
 package com.example.dasser.jokesmultimodule;
 
-import android.support.test.espresso.IdlingResource;
+import androidx.test.espresso.IdlingResource;
+
 
 public class JokeIdlingResource implements IdlingResource {
 
@@ -8,7 +9,7 @@ public class JokeIdlingResource implements IdlingResource {
     private final long waitingTime;
     private ResourceCallback callback;
 
-    public JokeIdlingResource(long waitingTime) {
+    JokeIdlingResource(long waitingTime) {
         this.startTime = System.currentTimeMillis();
         this.waitingTime = waitingTime;
     }

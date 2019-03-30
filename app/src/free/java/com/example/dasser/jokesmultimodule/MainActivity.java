@@ -2,7 +2,6 @@ package com.example.dasser.jokesmultimodule;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -12,6 +11,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -39,23 +39,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        final Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                mProgressBar.setVisibility(View.GONE);
-                mAppVersion_tv.setVisibility(View.VISIBLE);
-                mTellJoke_btn.setVisibility(View.VISIBLE);
-            }
+        final Runnable runnable = () -> {
+            mProgressBar.setVisibility(View.GONE);
+            mAppVersion_tv.setVisibility(View.VISIBLE);
+            mTellJoke_btn.setVisibility(View.VISIBLE);
         };
 
-        mTellJoke_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mAppVersion_tv.setVisibility(View.GONE);
-                mTellJoke_btn.setVisibility(View.GONE);
-                mProgressBar.setVisibility(View.VISIBLE);
-                new EndpointsAsyncTask(MainActivity.this, runnable).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-            }
+        mTellJoke_btn.setOnClickListener(v -> {
+            mAppVersion_tv.setVisibility(View.GONE);
+            mTellJoke_btn.setVisibility(View.GONE);
+            mProgressBar.setVisibility(View.VISIBLE);
+            new EndpointsAsyncTask(MainActivity.this, runnable).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         });
     }
 
