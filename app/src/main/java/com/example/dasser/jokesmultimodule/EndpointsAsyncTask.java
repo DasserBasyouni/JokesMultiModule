@@ -10,19 +10,17 @@ import com.example.dasser.backend.jokes.myApi.MyApi;
 import com.example.dasser.jokesui.JokesUiActivity;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
-import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
-import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
 
 import java.io.IOException;
 
 public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
 
-    private static final String BUNDLE_JOKE = "joke";
+    static final String BUNDLE_JOKE = "joke";
     private static MyApi myApiService = null;
     @SuppressLint("StaticFieldLeak") private Activity activity;
     private Runnable runnable;
 
-    public EndpointsAsyncTask(Activity activity, Runnable runnable) {
+    EndpointsAsyncTask(Activity activity, Runnable runnable) {
         this.activity = activity;
         this.runnable = runnable;
     }
@@ -34,12 +32,8 @@ public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(),
                     new AndroidJsonFactory(), null)
                     .setRootUrl("http://10.0.2.2:8080/_ah/api/")
-                    .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
-                        @Override
-                        public void initialize(AbstractGoogleClientRequest<?> abstractGoogleClientRequest) {
-                            abstractGoogleClientRequest.setDisableGZipContent(true);
-                        }
-                    });
+                    .setGoogleClientRequestInitializer(abstractGoogleClientRequest ->
+                            abstractGoogleClientRequest.setDisableGZipContent(true));
             myApiService = builder.build();
         }
         try {
