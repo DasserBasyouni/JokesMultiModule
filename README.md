@@ -1,4 +1,7 @@
 # JokesMultiModule
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4fb182a9faf94701a223903c83b99385)](https://app.codacy.com/app/DasserBasyouni/JokesMultiModule?utm_source=github.com&utm_medium=referral&utm_content=DasserBasyouni/JokesMultiModule&utm_campaign=Badge_Grade_Dashboard)
+
 An app with multiple flavors that uses multiple libraries and Google Cloud Endpoints to show jokes.
 - [x] Passed thought [Udacity's PROJECT SPECIFICATION: Build It Bigger rubric](https://review.udacity.com/#!/rubrics/61/view)
 
