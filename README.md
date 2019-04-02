@@ -9,6 +9,7 @@ An app with multiple flavors that uses multiple libraries and Google Cloud Endpo
 <p align="center"><img src="/pictures/screenshot1.png" width="200"> <img src="/pictures/screenshot2.png" width="200"> <img src="/pictures/screenshot3.png" width="200"> <img src="/pictures/screenshot4.png" width="200"></p>
 
 ## What I have learnt from?
+- Migrating to AndroidX
 - Add free and paid flavors to an app, and set up your build to share code between them
 - Factor reusable functionality into a Java library
 - Factor reusable Android functionality into an Android library
