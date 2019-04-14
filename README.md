@@ -20,11 +20,11 @@ An app with multiple flavors that uses multiple libraries and Google Cloud Endpo
 ## How does it work
 > Test it on emultors or you will have to change the emulator IP in [EndpointsAsyncTask.class line 36](https://github.com/DasserBasyouni/JokesMultiModule/blob/master/app/src/main/java/com/example/dasser/jokesmultimodule/EndpointsAsyncTask.java#L34)
 
-1. [Install the Cloud SDK](https://cloud.google.com/sdk/docs/)  
-2. [Follow the instructions in the Setup Cloud SDK section](https://cloud.google.com/endpoints/docs/frameworks/java/migrating-android)  
+1.  [Install the Cloud SDK](https://cloud.google.com/sdk/docs/)  
+2.  [Follow the instructions in the Setup Cloud SDK section](https://cloud.google.com/endpoints/docs/frameworks/java/migrating-android)  
 Note: You do not need to follow the rest of steps in the migration guide, only the Setup Cloud SDK.  
-3. Start or stop your local server by using the gradle tasks as shown in the following screenshot
-<p align="center"><img src="/pictures/devappserver-endpoints.png"></p>
-4. Once your local GCE server is started you should see the following at
+3.  Start or stop your local server by using the gradle tasks as shown in the following screenshot
+<p align="center"><img src="/pictures/devappserver-endpoints.png"></p>  
+4.  Once your local GCE server is started you should see the following at
 
 [localhost:8080](http://localhost:8080/)
