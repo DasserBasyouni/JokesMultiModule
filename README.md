@@ -6,7 +6,7 @@ An app with multiple flavors that uses multiple libraries and Google Cloud Endpo
 -  [x]  Passed thought [Udacity's PROJECT SPECIFICATION: Build It Bigger rubric](https://review.udacity.com/#!/rubrics/61/view)
 
 ## Screenshots
-<p align="center"><img src="/pictures/screenshot1.png" width="200"> <img src="/pictures/screenshot2.png" width="200"> <img src="/pictures/screenshot3.png" width="200"> <img src="/pictures/screenshot4.png" width="200"></p>
+<p align="center"> <img src="/pictures/screenshot1.png" width="200"> <img src="/pictures/screenshot2.png" width="200"> <img src="/pictures/screenshot3.png" width="200"> <img src="/pictures/screenshot4.png" width="200"> </p>
 
 ## What I have learnt from
 -   Migrating to AndroidX
